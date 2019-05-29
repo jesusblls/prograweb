@@ -10,10 +10,7 @@
               <h5 class="card-title">{{image.title}}</h5>
               <p class="card-text">{{image.description}}</p>
               <p class="card-text">{{fecha(image.created_at)}}</p>
-              <button :id="image.key" @click="borrar($event)"
-                type="button"
-                class="btn float-right"
-              >
+              <button :id="image.key" @click="borrar($event)" type="button" class="btn float-right">
                 <i :id="image.key" class="fa fa-trash"></i>
               </button>
             </div>
@@ -83,6 +80,7 @@
 </template>
 
 <script>
+import swal from "sweetalert";
 const { format } = require("timeago.js");
 export default {
   name: "ImagesIndex",
@@ -94,9 +92,14 @@ export default {
     close() {
       $("#Modal").modal("hide");
     },
-    borrar(img){
-      var key = img.target.id
-      this.db.ref("/image/"+key).remove();
+    borrar(img) {
+      swal({
+        title: "Aviso",
+        text: "Imagen eliminada correctamente",
+        icon: "success"
+      });
+      var key = img.target.id;
+      this.db.ref("/image/" + key).remove();
     }
   }
 };
