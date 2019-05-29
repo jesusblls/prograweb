@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/instafake/precache-manifest.b9dd3401673bf142a3b85959428fadc8.js"
+  "/prograweb/precache-manifest.7f83b0c2fced773bb6e911a9cc25305d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "PW"});
