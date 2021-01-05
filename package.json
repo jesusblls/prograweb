@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "firebase": "^5.8.2",
     "register-service-worker": "^1.5.2",
     "sweetalert": "^2.1.2",
